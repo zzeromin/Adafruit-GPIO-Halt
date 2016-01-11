@@ -1,4 +1,6 @@
 /*
+changed gpio 21 to 7 by zm
+
 GPIO HALT: monitors a single GPIO pin, initiates orderly shutdown.
 Similar functionality to the rpi_power_switch kernel module from the
 fbtft project, but easier to compile (no kernel headers needed).
@@ -67,7 +69,7 @@ char
    sysfs_root[] = "/sys/class/gpio", // Location of Sysfs GPIO files
    running      = 1;                 // Signal handler will set to 0 (exit)
 int
-   pin          = 21;                // Shutdown pin # (override w/argv)
+   pin          = 7;                // Shutdown pin # (override w/argv)
 volatile unsigned int
   *gpio;                             // GPIO register table
 const int
